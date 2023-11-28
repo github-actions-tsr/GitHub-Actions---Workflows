@@ -1,0 +1,20 @@
+name: Parallel Job Workflow
+on: [push]
+
+jobs:                                                       
+    Parallel-Jobs-Ubuntu:
+            runs-on: ubuntu-latest
+            steps:
+                - name: echo a string
+                  run: echo "Hello World!" 
+
+                - name: Multiline command
+                  run: |
+                    node -v
+                    npm -v
+                                    
+    Parallel-Jobs-MacOS:
+            runs-on: macos-latest
+            steps:
+                - name: MacOS Verison Details
+                  run: sw_vers
