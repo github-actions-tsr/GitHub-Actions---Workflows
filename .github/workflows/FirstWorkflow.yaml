@@ -1,0 +1,14 @@
+name: First Workflow                                    # The name of the workflow that GitHub displays on your repository's 'Actions' tab.
+on: [push]                                              # The GitHub event that triggers the workflow.
+
+jobs:                                                       # Define Jobs
+    run-shell-commands:                                     # <job_id> with a string that is unique to the jobs object. 
+            runs-on: ubuntu-latest                          # Define the type of machine to run the job on.
+            steps:                                          # define steps to set up and complete a job.
+                - name: echo a string                       # A name for your step to display on GitHub.
+                  run: echo "Hello World!"                  # Runs command-line programs using the operating system's shell. 
+
+                - name: Multiline command
+                  run: |
+                    node -v
+                    npm -v
