@@ -31,4 +31,3 @@ jobs:
 
             - name: Echo a secret
               run: echo "Secret String"
-
